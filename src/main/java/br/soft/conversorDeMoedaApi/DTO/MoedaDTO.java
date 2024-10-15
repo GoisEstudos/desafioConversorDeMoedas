@@ -1,4 +1,4 @@
 package br.soft.conversorDeMoedaApi.DTO;
 
-public record MoedaDTO(String moeda1, String moeda2) {
+public record MoedaDTO(Double usd,Double ars) {
 }
