@@ -23,15 +23,9 @@ public class MoedaController {
         this.moedaService = moedaService;
     }
 
-    @GetMapping("{moeda}/{moeda2}")
+    @GetMapping("/cambio/{moeda}/{moeda2}")
     public ResponseEntity<Moeda> getExchangeRate(@PathVariable String moeda, @PathVariable String moeda2) {
 
         return ResponseEntity.ok(moedaService.getExchangeRate(moeda, moeda2));
     }
-
-    @RequestMapping("/favicon.ico")
-    public void favicon() {
-        // Deixe vazio para ignorar a solicitação.
-    }
-
 }
