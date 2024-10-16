@@ -24,15 +24,9 @@ public class MoedaController {
     }
 
     @GetMapping("{moeda}")
-    public ResponseEntity<Map<String, Double>> getExchangeRate(@PathVariable String moeda) throws JsonProcessingException {
+    public ResponseEntity<Moeda> getExchangeRate(@PathVariable String moeda) {
 
-        MoedaDTO moedaDTO = moedaService.getExchangeRate(moeda);
-
-        Map<String, Double> response = new HashMap<>();
-        response.put("USD", moedaDTO.usd());
-        response.put("ARS", moedaDTO.ars());
-
-        return ResponseEntity.ok(response);
+        return ResponseEntity.ok(moedaService.getExchangeRate(moeda));
     }
 
 }

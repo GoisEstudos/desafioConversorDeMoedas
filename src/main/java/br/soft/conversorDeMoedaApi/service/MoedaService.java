@@ -16,8 +16,10 @@ public class MoedaService {
         this.exchangeRateApi = exchangeRateApi;
     }
 
-    public MoedaDTO getExchangeRate(String moeda) {
-        return exchangeRateApi.getExchangeRate(moeda);
+    public Moeda getExchangeRate(String moeda) {
+        MoedaDTO moedaDTO = exchangeRateApi.getExchangeRate(moeda);
+
+        return new Moeda(moedaDTO.result(), moedaDTO.time_last_update_utc(), moedaDTO.time_next_update_utc(), moedaDTO.base_code(), moedaDTO.conversion_rates());
     }
 
 }
