@@ -17,6 +17,7 @@ public class Moeda {
     private String time_last_update_utc;
     private String time_next_update_utc;
     private String base_code;
-    private Map<String, Double> conversion_rates;
+    private String target_code;
+    private Double conversion_rate;
 
 }

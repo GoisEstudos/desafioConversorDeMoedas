@@ -25,7 +25,7 @@ public class MoedaService {
         newMoeda.setTime_next_update_utc(moedaDTO.time_next_update_utc());
         newMoeda.setBase_code(moedaDTO.base_code());
         newMoeda.setTarget_code(moedaDTO.target_code());
-        newMoeda.setConversion_rate(moedaDTO.conversion_rate());
+        newMoeda.setConversion_rates(moedaDTO.conversion_rate());
 
         return newMoeda;
     }
